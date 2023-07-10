@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Snackbar.make(view, "DATOS REGISTRADOS", Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make(view, "DATOS REGISTRADOS", Snackbar.LENGTH_INDEFINITE).show();
 
                 Intent i = new Intent(MainActivity.this, NotasActivity.class);
                 startActivity(i);

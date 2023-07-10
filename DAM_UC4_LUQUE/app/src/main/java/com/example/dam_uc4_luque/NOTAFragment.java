@@ -12,7 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dam_uc4_luque.placeholder.PlaceholderContent;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A fragment representing a list of Items.
@@ -22,12 +24,12 @@ public class NOTAFragment extends Fragment {
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
-    private int mColumnCount = 1;
+    private int mColumnCount = 2;
+    private List<Nota> notaList;
+    private MyNOTARecyclerViewAdapter adapterNotas;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    private NotasInteractionListener mListener;
+
     public NOTAFragment() {
     }
 
@@ -64,8 +66,27 @@ public class NOTAFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyNOTARecyclerViewAdapter(PlaceholderContent.ITEMS));
+            notaList = new ArrayList<>();
+            notaList.add(new Nota("UC4","Estudiar para la evaluación de la UC4 - Caso: Notas y Listas", true, android.R.color.holo_blue_light));
+            notaList.add(new Nota("Recordar", "He aparcado el coche en la calle República Argentina, no olvidarme en el parque",false, android.R.color.holo_green_light));
+            notaList.add(new Nota("cumpleaños (fiesta)","no olvidar las velas", true, android.R.color.holo_orange_light));
+            adapterNotas = new MyNOTARecyclerViewAdapter(notaList, mListener);
+            recyclerView.setAdapter(adapterNotas);
         }
         return view;
     }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof NotasInteractionListener){
+            mListener = (NotasInteractionListener) context;
+        }else{
+            throw new RuntimeException(context.toString()
+                    + "Debe implementarse NotasInteractionListener");
+        }
+    }
+
+
+
 }

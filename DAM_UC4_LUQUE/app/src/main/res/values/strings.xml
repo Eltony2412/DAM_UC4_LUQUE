@@ -24,5 +24,8 @@
     <string name="title_notas">Notas</string>
     <string name="title_favoritas">favoritas</string>
     <string name="title_user_profile">perfil</string>
+    <string name="title_NOTAS">Title_notas</string>
+    <string name="title_PERFIL">Title_perfil</string>
+    <string name="title_Favoritas">Title_favoritas</string>
 
 </resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DAM_UC4_LUQUE</string>
+    <string name="TITULO">FORMULARIO DE REGISTRO</string>
+    <string name="SUBTITULO">INGRESE SUS RESPECTIVOS DATOS</string>
+    <string name="textview_nombres">NOMBRES:</string>
+    <string name="textview_apelllidos">APELLIDOS:</string>
+    <string name="textview_correo">CORREO:</string>
+    <string name="textview_fnaci">F. NACIMIENTO::</string>
+    <string name="textview_sexo">SEXO:</string>
+
+    <string name="editText_nombre">nombres</string>
+    <string name="editText_ape">apellidos</string>
+    <string name="editText_correo">correo</string>
+    <string name="editText_naci">nacimiento</string>
+
+    <string name="radio_MASCULINO">VARON</string>
+    <string name="radio_FEMENINO">MUJER</string>
+
+    <string name="butom_registrar">REGISTRAR</string>
+    <string name="title_activity_notas">NotasActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_notas">Notas</string>
+    <string name="title_favoritas">favoritas</string>
+    <string name="title_user_profile">perfil</string>
+
+</resources>
